@@ -25,7 +25,7 @@ def dfs(idx, cnt):
         start = lines[i][0]
         end = lines[i][1]
 
-        if 0 in num[start : end + 1]:
+        if 1 not in num[start : end + 1]:
             num[start : end + 1] = [1] * (end - start + 1)
             dfs(i, cnt + 1)
             num[start : end + 1] = [0] * (end - start + 1)
